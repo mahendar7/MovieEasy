@@ -1,6 +1,15 @@
-# Movieeasy
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
+
+
+Live Demo : https://movieeasy-1b9a2.web.app/login
+
+<b>Setup</b>
+
+        Add Firebase Project keys in Environment.ts and prod
+	      Add OTP API KEY From 2factor.in
+        npm install
+        ng serve
+        
 
 ## Development server
 

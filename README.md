@@ -6,7 +6,7 @@ Live Demo : https://movieeasy-1b9a2.web.app/login
 <b>Setup</b>
 
         Add Firebase Project keys in Environment.ts and prod
-	      Add OTP API KEY From 2factor.in
+        Add TMDB API Key in movie.service.ts
         npm install
         ng serve
         

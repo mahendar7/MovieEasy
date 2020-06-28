@@ -1,0 +1,93 @@
+@import '../../../variables.scss';
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+}
+
+nav .branding {
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+
+nav .branding h1{
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: $yellow-color;
+    & span{
+        color: $red-color;
+    }
+}
+
+nav .nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & h6{
+        margin-right: 1rem;
+    }
+    button{
+        padding: 0.15rem 0.5rem;
+        border: none;
+        outline: none;
+        background: $red-color;
+        margin-top: -0.4rem;
+        color: white;
+        border-radius: 50%!important;
+        -webkit-border-radius: 50%!important;
+        -moz-border-radius: 50%!important;
+        -ms-border-radius: 50%!important;
+        -o-border-radius: 50%!important;
+    }
+}
+
+nav.home-nav{
+    // background: linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,0.9),rgba(0,0,0,0.5));
+    // background: linear-gradient(to right, #032541);
+    background: linear-gradient(to right, rgba(3, 37, 65, 1),rgba(3, 37, 65, 1),rgba(3, 37, 65, 1));
+    align-items: center;
+    color: $white-color;
+}
+
+@media(max-width:420px) {
+    nav .branding h1
+    {font-size: 1.5rem;}
+}
+
+@media(min-width: 576px) {
+    nav .container{
+        justify-content: space-around;
+    }
+}
+
+@media(min-width: 768px) {
+    nav .container {
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 992px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media(min-width: 1200px) {
+    nav .container {
+        max-width: 1152px;
+        justify-content: space-around;
+    }
+    .container-2 {
+        padding: 0 4rem;
+    }
+}
+
+@media(min-width: 1500px) {
+    nav .container {
+        justify-content: space-between;
+    }
+}

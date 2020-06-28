@@ -1,0 +1,111 @@
+<ngx-spinner [name]="'loading'" bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-loader"
+    [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+</ngx-spinner>
+
+<app-navbar [navOptions]="true"></app-navbar>
+
+<div class="movie-detail-page">
+
+
+    <section class="movie-hero" *ngIf="movie">
+        <div class="container-2">
+            <div class="wrapper">
+                <div class="left">
+                    <div class="poster-card">
+                        <img [src]="Image_BASE_URL+movie['poster_path']" [alt]="movie.title">
+                        <!-- <div class="poster-card-body">
+                        <img src="" alt="">
+                    </div> -->
+                    </div>
+                </div>
+                <div class="right">
+                    <img [src]="Image_BASE_URL+movie.backdrop_path">
+                    <div class="movie-title">
+                        <h1>{{movie.title}} <span> ({{movie.release_date.slice(0,4)}})</span></h1>
+                        <div class="movie-title-child">
+                            <div class="ua-part">
+                                <!-- <h4 class="ua">UA</h4> -->
+                                <h4>{{movie.release_date | date:'dd/MM/yyyy'}}
+                                    ({{movie.production_countries[0].iso_3166_1}})
+                                </h4>
+                            </div>
+                            <div class="dot">
+                                <h4>.</h4>
+                            </div>
+                            <h4 class="gerne" *ngFor="let gerne of movie.genres">
+                                {{gerne.name}}
+                            </h4>
+                            <div class="dot">
+                                <h4>.</h4>
+                            </div>
+                            <div class="duration">
+                                <h4>{{calcDuration(movie.runtime)}}</h4>
+                            </div>
+                        </div>
+                        <div class="over-view">
+                            <h5>Overview</h5>
+                            <p>{{movie.overview}}</p>
+                        </div>
+                        <div class="popularity">
+                            <div class="user-score">
+                                <div class="text">
+                                    <h4>User Score</h4>
+                                </div>
+                                <div class="score">
+                                    <h6><i class="fa fa-star" aria-hidden="true"></i> {{movie.vote_average*10}}
+                                        <span>%</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="votes">
+                                <div class="text">
+                                    <h4>Votes Count</h4>
+                                </div>
+                                <div class="votes-number">
+                                    <h6><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{movie.vote_count}}</h6>
+                                </div>
+                            </div>
+                            <div class="languages">
+                                <div class="text">
+                                    <h4>Languages</h4>
+                                </div>
+                                <div class="lang">
+                                    <h6 *ngFor="let lang of movie.spoken_languages">{{lang.name}}</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="director-story">
+                            <ng-container *ngFor="let i of movie.credits.crew ; let k=index">
+                                <div class="box"
+                                    *ngIf="i.job === 'Director' || i.job === 'Screenplay' || i.job === 'Story'">
+                                    <h4>{{i.name}}</h4>
+                                    <h6>{{i.job}}</h6>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cast" *ngIf="movie">
+        <div class="container-2">
+            <h4>Top Billed Cast</h4>
+            <div class="wrapper">
+                <ng-container *ngFor="let actor of  movie.credits.cast; let i=index">
+                    <div class="cast-card" *ngIf="actor.profile_path">
+                        <img [src]="Image_BASE_URL+actor.profile_path" [alt]="actor.name">
+                        <div class="cast-card-body">
+                            <h4>{{actor.name}} <span *ngIf="actor.character">As</span></h4>
+                            <p>{{actor.character}}</p>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </section>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,67 @@
+@import "~bootstrap/scss/bootstrap";
+@import './variables.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body { height: 100%; }
+body{
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Raleway', sans-serif;
+    color: $white-color;
+    // height: 4000vh;
+    // margin: 0;
+}
+body {font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+
+@media(min-width: 1200px){
+    .container{
+        max-width: 1152px;
+    }
+    .container-2{
+        padding: 0 4rem;
+    }
+    
+}
+
+.container{
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.btn{
+    padding: 1rem 5rem;
+    border:none;
+    outline: none;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+.form-control, .card, .btn{
+    outline: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+*{
+    border-radius: 0!important;
+    -webkit-border-radius: 0!important;
+    -moz-border-radius: 0!important;
+    -ms-border-radius: 0!important;
+    -o-border-radius: 0!important;
+}

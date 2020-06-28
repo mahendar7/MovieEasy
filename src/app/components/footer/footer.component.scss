@@ -1,0 +1,129 @@
+@import '../../../variables.scss';
+
+footer{
+    // background: #032541;
+    background: #121212;
+    color: #E4E4E4;
+    padding: 2rem 0;
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+    .branding{
+        border:none;
+        outline: none;
+        cursor: pointer;
+            h1{
+            font-family: 'Signika Negative', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: $yellow-color;
+            & span{
+                color: $red-color;
+            }            
+        }
+        h4{
+            font-size: 0.75rem;
+        }
+    }
+    .about-me h1, .data-sources h1,
+    .social h1{
+        font-size: 1.25rem;
+        position: relative;
+        margin-bottom: 1rem;
+        &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            display: block;
+            width: 90px;
+            height: 1px;
+            background: white;
+        }
+    }
+    .about-me{
+        p span{
+            font-style: italic;
+            font-size: 1rem;
+        }
+    }
+    .data-sources{
+        .links{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .social{
+        .links{
+            display: flex;
+            flex-direction: column;
+            a i{
+                margin-right: 1rem;
+                margin-bottom: 0.25rem;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+        color: #F9F9F9;
+        &:hover{
+            color: #FEFEFE;
+            opacity: 0.8;
+        }
+    }
+}
+}
+
+
+@media(max-width:420px) {
+    .container{
+        padding: 0 1rem;
+    }
+}
+
+@media(max-width:576px) {
+    footer .wrapper {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    div{
+        margin-bottom: 1rem;
+    }
+    div:last-child{
+        margin-bottom: 0;
+    }
+}
+
+@media(min-width:577px) {
+    footer .wrapper{
+        flex-direction: column;
+        div{
+            margin-bottom: 1rem;
+        }
+        div:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media(min-width:850px){
+    footer .wrapper{
+        flex-direction: row;
+    }
+    .container{
+        padding: 0;
+    }
+}
+
+@media(max-width:991px){
+    .container{
+        max-width: 100%;
+        padding:0 2rem;
+    }
+}
+
+@media(min-width:1200px){
+    footer .wrapper{
+        flex-direction: row;
+    }
+} 

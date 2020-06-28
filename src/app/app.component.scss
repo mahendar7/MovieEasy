@@ -1,0 +1,32 @@
+@import '../variables.scss';
+
+.volume{
+    position: fixed;
+    bottom: 1rem;
+    right: 3rem;
+
+    i{
+        padding: 0.5rem;
+        border-radius: 50%!important;
+        -webkit-border-radius: 50%!important;
+        -moz-border-radius: 50%!important;
+        -ms-border-radius: 50%!important;
+        -o-border-radius: 50%!important;
+        background: $red-color;
+        color: black;
+        font-size: 1.5rem;
+        cursor: pointer;
+}
+    i.fa-volume-up{
+        background: green;
+        color: white;
+    }
+}
+
+@media(max-width:420px) {
+    .volume{
+        position: fixed;
+        bottom: 1rem;
+        right: 2rem;
+    }
+}

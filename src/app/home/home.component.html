@@ -1,0 +1,85 @@
+<ngx-spinner [name]="'loading'" bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-loader"
+    [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+</ngx-spinner>
+
+<app-navbar [navOptions]="true"></app-navbar>
+
+<!-- Selection and Search Bar -->
+<section class="select-search">
+    <div class="container">
+        ` <div class="selection-wrap">
+            <div class="left">
+                <ul>
+                    <li [ngClass]="trending ? 'active' : '' " (click)="trending = !trending;getMovies('trending')"
+                        #Trending>
+                        <a>Trending</a>
+                    </li>
+                    <li [ngClass]="!trending ? 'active' : '' " (click)="trending = !trending;getMovies('upcoming')"
+                        #Upcoming>
+                        <a>Upcoming</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="wrap">
+                    <div class="search">
+                        <div>
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <input type="text" placeholder="Search All Movies" [(ngModel)]="searchInput"
+                                (keyup)="searchMovies()" (click)="searchMovies()" name="searchInput" id="searchInput"
+                                #searchBox>
+                            <input type="hidden" id="hiddenInput" name="hiddenInput" (click)="0" #hiddenInput>
+                            <i class="fa fa-close close" aria-hidden="true" *ngIf="searchInput"
+                                (click)="searchInput=''"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Selection and Search Bar -->
+
+<!-- Movies Card Rendering -->
+<section class="movies-list" [ngClass]="searchInput ? 'search-width' : ''">
+    <div class=" container-2">
+        <div class="movie-wrapper">
+            <ng-container *ngIf="!searchInput">
+                <ng-container *ngFor="let movie of movies">
+                    <div *ngIf="movie.backdrop_path">
+                        <app-movie-card [data]="movie"></app-movie-card>
+                    </div>
+                </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="searchInput">
+                <ng-container *ngFor="let movie of searchMoviesList">
+                    <div *ngIf="movie.backdrop_path">
+                        <app-movie-card [data]="movie"></app-movie-card>
+                    </div>
+                </ng-container>
+                <div class="error" *ngIf="!searchMoviesList">
+                    <h6 class="text-center">No Movies Found for keyword "{{searchInput}} "</h6>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+<!-- Movies Card Rendering -->
+
+<app-footer></app-footer>
+
+<!-- Upper Mic Button -->
+<div>
+    <div class="mic" *ngIf="isSpeaking == false">
+        <i class="fa fa-microphone" aria-hidden="true" (click)="voiceSearch()"></i>
+    </div>
+
+    <div class="audio-waves" *ngIf="isSpeaking == true">
+        <ngx-spinner [name]="'audioWaves'" bdColor="rgba(0, 0, 0, 0)" size="medium" color="#fff"
+            type="ball-scale-multiple" [fullScreen]="false">
+        </ngx-spinner>
+    </div>
+</div>
+<!-- Upper Mic Button -->

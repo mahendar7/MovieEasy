@@ -1,0 +1,268 @@
+@import '../../variables.scss';
+
+section.select-search{
+    // background: linear-gradient(to bottom,rgba(0,0,0,0.1),rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+    background: #47545E;
+    border-bottom: 1px solid white;
+    & .selection-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .left ul{
+            list-style-type: none;
+            display: flex;
+            & li{
+                padding: 0.3rem 2rem;
+                background: $white-color;
+                outline: none;
+                cursor: pointer;
+            }
+            & li:first-child{
+                border-right: 1px solid black;
+            }
+            & li.active{
+                background: $red-color;
+                border: 1px solid $red-color;
+            }
+            & li a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+        & .right .wrap{
+            & .search div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.25rem 1.5rem;
+                background: $white-color;
+                border-radius: 20px!important;
+                -webkit-border-radius: 20px!important;
+                -moz-border-radius: 20px!important;
+                -ms-border-radius: 20px!important;
+                -o-border-radius: 20px!important;
+                margin-right: 1rem;
+                & i{
+                    color: $black-color;
+                    margin-right: 1rem;
+                    width: 100%;
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+                & i.close{
+                    margin-right: 0;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+                & input{
+                    outline: none;
+                    border: 1px solid transparent;
+                    color: $black-color;
+                }
+            }
+        }
+    }
+}
+
+.movies-list {
+    min-height: 80vh;
+    &.search-width{
+        height: 100vh;
+        overflow-x: auto;
+    }
+    background: #47545E;
+    padding: 2rem 0;
+    .movie-wrapper{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 0.5rem;
+    }
+}
+
+div.mic{
+    position: fixed;
+    top: 5rem;
+    right: 3rem;
+    i{
+        padding: 0.5rem 0.75rem;
+        border-radius: 50%!important;
+        -webkit-border-radius: 50%!important;
+        -moz-border-radius: 50%!important;
+        -ms-border-radius: 50%!important;
+        -o-border-radius: 50%!important;
+        background: $white-color;
+        color: black;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+div.audio-waves{
+    position: fixed;
+    top: 5rem;
+    right: 3rem;
+    padding: 1rem 0.75rem;
+    font-size: 0.5rem;    
+}
+
+@media(min-width: 768px) {
+    .container-2 {
+        width: 100%;
+        padding: 0 2rem;
+    }
+    .movies-list .movie-wrapper{
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 0.25rem;
+        grid-row-gap: 0.25rem;
+        .movie-card{
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+@media(max-width:420px) {
+    section.select-search .selection-wrap{
+        flex-direction: column;
+    }
+    .movies-list .movie-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .select-search{
+        padding-bottom: 1rem;
+    }
+    .container-2{
+        padding: 0 0;
+    }
+    div.audio-waves{
+        top: 9rem;
+        right: 1rem;
+        padding: 0.5rem 0.5rem;
+        font-size: 0.5rem;    
+    }
+    div.mic{
+        top: 7.8rem;
+        right: 0.5rem;
+        i{
+            padding: 0.4rem 0.60rem;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media(min-width:421px) {
+    section.select-search .selection-wrap{
+        flex-direction: row;
+    }
+    .container-2{
+        padding: 0 1rem;
+    }
+    .container{
+        width: 100%;
+    }
+    .movies-list .movie-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .selection-wrap{
+        width: 100%;
+    }
+    .search{
+        margin-bottom: 1rem;
+    }
+    section.select-search .selection-wrap .left ul li {
+        padding: 0.25rem 0.3rem;
+    }
+    .search{
+        width: 90%;
+        margin-left: 0.3rem;
+    }
+    .movies-list{
+        padding: 1rem 0;
+    }
+    .select-search{
+        padding-top: -1.5rem;
+    }
+    div.audio-waves{
+        top: 5.8rem;
+        right: 0.5rem;
+        padding: 0.5rem 0.5rem;
+        font-size: 0.5rem;    
+    }
+    div.mic{
+        top: 5.2rem;
+        right: 0.5rem;
+        i{
+            padding: 0.4rem 0.60rem;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media(min-width:577px) {
+    section.select-search .selection-wrap{
+        flex-direction: row;
+    }
+    .movies-list .movie-wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+    section.select-search .selection-wrap .left ul li {
+        padding: 0.30rem 1rem;
+    }
+    .search{
+        width: 100%;
+    }
+}
+
+@media(min-width:850px) {
+    .movies-list .movie-wrapper{
+        grid-template-columns: repeat(3,1fr);
+    }
+    section.select-search .selection-wrap .left ul li {
+        padding: 0.3rem 2rem;
+    }
+    div.mic{
+        top: 5rem;
+        right: 1rem;
+        i{
+            padding: 0.5rem 0.75rem;
+            font-size: 1.5rem;
+        }
+    }
+    div.audio-waves{
+        top: 5rem;
+        right: 1rem;
+        padding: 1rem 0.75rem;
+        font-size: 0.5rem;    
+    }
+}
+
+@media(min-width:1200px) {
+    .movies-list .movie-wrapper{
+        grid-template-columns: repeat(4,1fr);
+    }
+    section.select-search .selection-wrap .left ul li {
+        padding: 0.3rem 2rem;
+    } 
+    div.mic{
+        top: 5rem;
+        right: 1rem;
+        i{
+            padding: 0.5rem 0.75rem;
+            font-size: 1.5rem;
+        }
+    }
+    div.audio-waves{
+        top: 5rem;
+        right: 3rem;
+        padding: 1rem 0.75rem;
+        font-size: 0.5rem;    
+    }
+}
+
+@media(min-width:1550px) {
+    .movies-list .movie-wrapper{
+        grid-template-columns: repeat(5,1fr);
+    }
+    div.audio-waves{
+        right: 3rem;   
+    }
+}

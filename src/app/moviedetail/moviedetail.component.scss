@@ -1,0 +1,447 @@
+@import '../../variables.scss';
+
+.movie-detail-page{
+    min-height: 80vh;
+}
+section.movie-hero{
+    background: #2A2922;
+    color: white;
+    padding: 2rem 0; 
+    border-bottom: 1px solid white;
+    
+    .wrapper {
+        display: flex;
+        .poster-card{
+            max-width: 300px;
+            margin-right: 3rem;
+            img{
+                width: 300px;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .right{
+            flex-basis: auto;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            
+            img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                // object-fit: contain;
+                opacity: 0.1;
+                background: linear-gradient(#707070 0.1 , #707070 0.1);
+            }
+            .movie-title {
+                padding: 1rem 6rem 0 2rem;
+                justify-content: center;
+                align-items: center;
+                h1{
+                font-weight: bold;
+                font-family: 'Raleway';
+                font-size: 2.3rem;
+                span{
+                    font-size: 2rem;
+                    font-weight: 400;
+                    }
+                }
+                .movie-title-child{
+                    display: flex;
+                    // justify-content: center;
+                    align-items: center;
+                    h4{
+                        margin-right: 0.25rem;
+                        font-size: 1rem;
+                        justify-content: center;
+                    }
+                    .ua-part{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .ua {
+                            padding: 0.25rem;
+                            border: 1px solid black;
+                        }
+                    }
+                    .dot h4{
+                        font-family: 'Raleway';
+                        font-size: 2rem;
+                        margin-top: -1rem;
+                        border-radius: 50%!important;
+                        -webkit-border-radius: 50%!important;
+                        -moz-border-radius: 50%!important;
+                        -ms-border-radius: 50%!important;
+                        -o-border-radius: 50%!important;
+}
+                }
+                .popularity {
+                    display: flex;
+                    padding: 1rem 0;
+                    h4{
+                        font-size: 1rem;
+                        font-family: 'Raleway';
+                    }
+                    .user-score,.votes,.languages{
+                        margin-right: 3rem;
+                    }
+                }
+                .over-view{
+                    padding-right: 3rem;
+                    
+                }
+                .director-story{
+                    display: flex;
+                    padding-left: 0;
+                    .box {
+                        margin-right: 0.75rem;
+                        justify-content: space-evenly;
+                        h4{
+                            font-size: 1rem;
+                            font-weight: bold;
+                            font-family: 'Raleway';
+                        }
+                        h6{
+                            font-size: 0.7rem;
+                            margin-top: -0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.cast{
+    background: #2A2922;
+    color: $white-color;
+    padding: 2rem 0;
+    h4{
+        margin-bottom: 1.25rem;
+        font-family: 'Philosopher', Times, serif ;
+    }
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-gap: 1rem;
+         
+        .cast-card{
+            border: 1px solid #F5F5F5;
+            border-radius: 10px!important;
+            background: #47545E;
+            color: white;
+            img{
+                border-radius: 10px!important;
+                border-bottom-left-radius: 0px!important;
+                border-bottom-right-radius: 0px!important;
+                width: 100%;
+                height: 330px;
+                background-size: cover;
+                object-fit: cover;
+
+            }
+            .cast-card-body {
+                padding-left: 1rem;
+                padding-top: 0.25rem;
+                h4{
+                    font-weight: bold;
+                    font-family: 'Raleway';
+                    font-size: 1.25rem;
+                    margin-bottom: 0.25rem;
+                    span{
+                        font-size: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:576px) {
+    .container-2{
+        width: 100%;
+    }
+    .movie-hero .wrapper{
+        flex-direction: column;
+        .left .poster-card {
+            padding: 0 3rem;
+        }
+    }
+    section.cast {
+    h4{
+        padding-left: 1rem;
+        margin-top: -0.5rem;
+    }
+    .wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+    section.cast .wrapper .cast-card,
+    section.cast .wrapper .cast-card img{
+        border-radius: 0!important;
+        -webkit-border-radius: 0!important;
+        -moz-border-radius: 0!important;
+        -ms-border-radius: 0!important;
+        -o-border-radius: 0!important;
+}
+
+section.cast .wrapper .cast-card{
+    // max-width: 500px;
+    img{
+        height: 100%;
+    }
+.cast-card-body{
+    h4{
+        margin-left: 0;
+        padding-left: 0;
+    }
+    padding-top: 1rem;
+}
+}
+}
+
+@media(min-width:577px) {
+    .container-2{
+        width: 100%;
+    }
+    .movie-hero .wrapper{
+        flex-direction: column;
+        .left .poster-card {
+            padding: 2rem 3rem;
+        }
+    }
+    section.cast {
+    h4{
+        padding-left: 1rem;
+        margin-top: -0.5rem;
+    }
+    .wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+    section.cast .wrapper .cast-card,
+    section.cast .wrapper .cast-card img{
+        border-radius: 0!important;
+        -webkit-border-radius: 0!important;
+        -moz-border-radius: 0!important;
+        -ms-border-radius: 0!important;
+        -o-border-radius: 0!important;
+}
+
+section.cast .wrapper .cast-card{
+    // max-width: 500px;
+    img{
+        height: 100%;
+    }
+.cast-card-body{
+    h4{
+        margin-left: 0;
+        padding-left: 0;
+    }
+    padding-top: 1rem;
+}
+}
+}
+
+
+@media(max-width:421px) {
+    section.cast .wrapper .cast-card{
+        img{
+            height: 400px;
+        }
+    }
+    section.movie-hero .wrapper .right .movie-title .popularity .user-score,
+     section.movie-hero .wrapper .right .movie-title .popularity .votes,
+      section.movie-hero .wrapper .right .movie-title .popularity .languages{
+        margin-right: 1rem;
+    }
+    .movie-hero .wrapper .left .poster-card{
+        padding: 2rem 2rem;
+    }
+    h4.gerne{
+        display: flex;
+        flex-direction: column;
+    }
+    section.movie-hero .wrapper .right .movie-title{
+        padding: 1rem 0rem 0 1rem;
+    }
+    section.movie-hero .wrapper .right .movie-title .over-view{
+        padding-top: 1rem;
+    }
+    section.movie-hero .wrapper .right .movie-title .director-story .box{
+        margin-right: 0.25rem;
+    }
+    .movie-hero, .cast{
+        overflow:hidden;
+    }
+}
+
+@media(min-width:422px) {
+    section.cast .wrapper .cast-card{
+        img{
+            height: 500px;
+        }
+    }
+    section.movie-hero .wrapper .right .movie-title .popularity .user-score,
+     section.movie-hero .wrapper .right .movie-title .popularity .votes,
+      section.movie-hero .wrapper .right .movie-title .popularity .languages{
+        margin-right: 1rem;
+    }
+    .movie-hero .wrapper .left .poster-card{
+        padding: 2rem 2rem;
+    }
+    h4.gerne{
+        display: flex;
+        flex-direction: column;
+    }
+    section.movie-hero .wrapper .right .movie-title{
+        padding: 1rem 0rem 0 1rem;
+    }
+    section.movie-hero .wrapper .right .movie-title .over-view{
+        padding-top: 1rem;
+    }
+    section.movie-hero .wrapper .right .movie-title .director-story .box{
+        margin-right: 0.25rem;
+    }
+    .movie-hero, .cast{
+        overflow:hidden;
+    }
+    section.movie-hero .wrapper .right .movie-title .movie-title-child .dot{
+        margin: 0 1rem;
+    }
+}
+
+@media(min-width:650px) {
+    section.cast {
+        padding-bottom: 5rem;
+        .wrapper{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    section.cast .wrapper .cast-card{
+        img{
+            height: 350px;
+        }
+    }
+    section.movie-hero .wrapper .right .movie-title .popularity .user-score,
+     section.movie-hero .wrapper .right .movie-title .popularity .votes,
+      section.movie-hero .wrapper .right .movie-title .popularity .languages{
+        margin-right: 1rem;
+    }
+    .movie-hero .wrapper .left .poster-card{
+        padding: 2rem 2rem;
+    }
+    h4.gerne{
+        display: flex;
+        flex-direction: column;
+    }
+    section.movie-hero .wrapper .right .movie-title{
+        padding: 1rem 0rem 0 1rem;
+    }
+    section.movie-hero .wrapper .right .movie-title .over-view{
+        padding-top: 1rem;
+    }
+    section.movie-hero .wrapper .right .movie-title .director-story .box{
+        margin-right: 1rem;
+    }
+    .movie-hero, .cast{
+        overflow:hidden;
+    }
+    section.movie-hero .wrapper .right .movie-title .movie-title-child .dot{
+        margin: 0 1rem;
+    }
+}
+
+
+@media(min-width:850px) {
+    section.cast {
+        padding-bottom: 5rem;
+        .wrapper{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    section.cast .wrapper .cast-card{
+        img{
+            height: 350px;
+        }
+    }
+    section.movie-hero .wrapper .right .movie-title .popularity .user-score,
+     section.movie-hero .wrapper .right .movie-title .popularity .votes,
+      section.movie-hero .wrapper .right .movie-title .popularity .languages{
+        margin-right: 3rem;
+    }
+    .movie-hero .wrapper .left .poster-card{
+        padding: 2rem 3rem;
+    }
+    h4.gerne{
+        display: flex;
+        flex-direction: column;
+    }
+    section.movie-hero .wrapper .right .movie-title{
+        padding: 1rem 0rem 0 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section.movie-hero .wrapper .right .movie-title .over-view{
+        padding-top: 1rem;
+    }
+    section.movie-hero .wrapper .right .movie-title .over-view p{
+        padding-right: 6rem;
+    }
+    section.movie-hero .wrapper .right .movie-title .director-story .box{
+        margin-right: 3rem;
+    }
+    .movie-hero, .cast{
+        overflow:hidden;
+    }
+    section.movie-hero .wrapper .right .movie-title .movie-title-child .dot{
+        margin: 0 1rem;
+    }
+}
+
+@media(min-width:1200px) {
+    .container-2{
+        width: 100%;
+    }
+    .movie-hero .wrapper{
+        flex-direction: row;
+    }
+    section.cast {
+    padding-bottom: 5rem;
+    .wrapper{
+        grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    section.cast .wrapper .cast-card{
+        img{
+            height: 350px;
+        }
+        .cast-card-body{
+            h4{
+                margin-left: 0;
+                padding-left: 0;
+            }
+            padding-top: 1rem;
+        }
+    }
+    section.movie-hero .wrapper .left{
+        margin-right: 1rem;
+    }
+    section.movie-hero .wrapper .right .movie-title{
+        padding: 1rem 0rem 0 5rem;
+    }
+    
+}
+
+@media(min-width:1550px) {
+    section.cast {
+        padding-bottom: 5rem;
+        .wrapper{
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}

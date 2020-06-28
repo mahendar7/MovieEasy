@@ -1,0 +1,23 @@
+<div class="movie-card mb-2 mt-1" *ngIf="data['backdrop_path']" [routerLink]="['/movie/', data.id]">
+    <div>
+        <img [src]="Image_BASE_URL+data.backdrop_path ? Image_BASE_URL+data.backdrop_path : 'https://www.9to5animations.com/wp-content/uploads/2016/03/loading-gif.gif'"
+            alt="data.title">
+        <!-- <img [src]="Image_BASE_URL+data.backdrop_path" alt="data.title"> -->
+    </div>
+    <div class="movie-title">
+        <h2>{{data.title.slice(0,30)}} {{data.title.length>30? '...' : ''}}</h2>
+    </div>
+    <div class="likes-rating">
+        <div class="likes">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <h4>{{data.vote_count}}</h4>
+        </div>
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <h4>{{data.popularity.toString().slice(0,2)/10}}</h4>
+        </div>
+        <div class="released">
+            <h4> {{data.release_date | date:'dd-MM-yyyy'}}</h4>
+        </div>
+    </div>
+</div>

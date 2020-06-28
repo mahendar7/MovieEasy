@@ -1,0 +1,11 @@
+<nav [ngClass]="navOptions ? 'home-nav' : ''">
+    <div class="container">
+        <div class="branding" routerLink="/">
+            <h1>MOVIE<span>EASY</span></h1>
+        </div>
+        <div *ngIf="navOptions" class="nav-list">
+            <h6>{{userDetails.displayName ? userDetails.displayName : 'User'}}</h6>
+            <button (click)="logoutUser()" title="Logout"> <i class="fa fa-power-off" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</nav>

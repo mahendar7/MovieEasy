@@ -1,0 +1,11 @@
+<div>
+    <!-- Header -->
+    <router-outlet></router-outlet>
+    <!-- Footer -->
+    <!-- Sticky Icon -->
+    <div class="volume">
+        <i class="fas fa-volume-up" (click)="volumeChange()" *ngIf="volume === 'true'"></i>
+        <i class="fas fa-volume-mute" (click)="volumeChange()" *ngIf="volume === 'false'"></i>
+    </div>
+    <!-- Sticky Icon -->
+</div>

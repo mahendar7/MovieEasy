@@ -1,0 +1,30 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-loader" [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+</ngx-spinner>
+
+<header>
+    <app-navbar [navOptions]="false"></app-navbar>
+    <div class="hero">
+        <div class="container">
+            <div class="hero-wrap">
+                <div class="left">
+                    <h1>Now Movies Search <span>Made Easy</span></h1>
+                    <h2>Browse Thousunds of Movies in Realtime with <span> Voice Enabled </span>Search Tool</h2>
+                    <div>
+                        <div class="login">
+                            <button class="login-btn" (click)="googleLogin()" id="loginBtn" #loginBtn>Login Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div>
+                        <img src="../../assets/images/login-movielist-3.png" alt="" class="middle">
+                        <img src="https://www.gadgetreview.com/wp-content/uploads/2012/11/Netflix-Streaming-End-of-Year-Posts.jpg"
+                            alt="" class="top">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

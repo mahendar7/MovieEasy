@@ -10,6 +10,19 @@ Live Demo : https://movieeasy-1b9a2.web.app/login
         npm install
         ng serve
         
+![alt text](http://www.mediafire.com/convkey/1285/rrjnnwfxmvj8dqozg.jpg?size_id=a)
+
+![alt text](http://www.mediafire.com/convkey/1649/t3f6w8fiz2m8bjyzg.jpg?size_id=a)
+
+![alt text](http://www.mediafire.com/convkey/8ada/pzrzmg0obmhoaqdzg.jpg?size_id=a)
+
+![alt text](http://www.mediafire.com/convkey/8df3/54uzbfu61wlnfl3zg.jpg?size_id=a)
+
+![alt text](http://www.mediafire.com/convkey/7e36/sgmrmqtbv4rcfjxzg.jpg?size_id=a)
+
+![alt text](http://www.mediafire.com/convkey/4bda/taiguno9mzdt7znzg.jpg?size_id=a)
+
+![alt text](http://www.mediafire.com/convkey/a041/d385mxq6l6o99bgzg.jpg?size_id=a)
 
 ## Development server
 

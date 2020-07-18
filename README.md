@@ -1,5 +1,6 @@
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
+#MovieEasy
 
+A dynamic Web App, Audio (Mic/Speaker) Interaction Implemented and Used API for Dynamic Data
 
 Live Demo : https://movieeasy-1b9a2.web.app/login
 
@@ -23,6 +24,8 @@ Live Demo : https://movieeasy-1b9a2.web.app/login
 ![alt text](http://www.mediafire.com/convkey/4bda/taiguno9mzdt7znzg.jpg?size_id=a)
 
 ![alt text](http://www.mediafire.com/convkey/a041/d385mxq6l6o99bgzg.jpg?size_id=a)
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
 
 ## Development server
 
